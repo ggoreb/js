@@ -1,0 +1,47 @@
+<body>
+  <script>
+    // static 으로 도배하기 (Method 영역)
+    // new 로 생성 (Heap 영역)
+    
+    //   --> JVM 쓰레기수집기능(X)
+
+    // int num = 123;
+    // println(123);
+    // println(num);
+
+    // 함수는 자료형태
+    const func = (v) => console.log(v)
+
+    function printAll(...args) {
+      // 화살표 함수 Arrow function (간단하게 작성)
+      args.forEach( func );
+      // 1회용? 이름을 부여해서 여러번 사용?
+      args.forEach( (v, i) => console.log(v, i) );
+
+      /* Array API */
+      // 자바에서는 인터페이스를 사용
+      // args.forEach(function(v, i, a) {
+      //   console.log(i);
+      // });
+      // args.map(function(value, index, array) {
+      //   console.log(value, index, array);
+      // });
+      //          길이 표현 length or size
+      // for(let i = 0; i < args.length; i++) {
+      //   console.log(args[i]);
+      // }
+    }
+    printAll(1, 2, 3, 'a');
+
+    // 자바스크립트에서는 오버로딩 개념 없음
+    // function printAll2() {
+    //   console.log(arguments);
+    //   for(let i = 0; i < arguments.length; i++) {
+    //     console.log(arguments[i]);
+    //   }
+    // }
+    // printAll2();
+    // printAll2(1);
+    // printAll2(1, 2, 3);
+  </script>
+</body>

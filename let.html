@@ -1,0 +1,13 @@
+<body>
+  <script>
+    let globalScope = 'global name';
+    {
+      let globalScope = 'javascript';
+      console.log(globalScope);
+      globalScope = 'hello';
+      console.log(globalScope);
+    }
+    console.log(globalScope);
+
+  </script>
+</body>

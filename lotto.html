@@ -1,0 +1,36 @@
+<body>
+  <script>
+    // class A {
+    //   constructor() {
+
+    //   }
+    //   run() { // 메소드
+    //     console.log('run!!!');
+    //   }
+    // }
+    // const a = new A();
+    // a.run();
+
+    // AJAX 데이터 가져오기
+    const lotto = [1, 8, 16];
+    let count = 0;
+    while(true) {
+      const selected = [];
+      while (selected.length < 3) {
+        const num = parseInt(Math.random() * 45) + 1;
+        if (selected.indexOf(num) == -1) {
+          selected.push(num);
+          selected = selected.push(num);
+        }
+      }
+      selected.sort((a, b) => a - b);
+      console.log(selected);
+      count++;
+      if(lotto == selected.toString()) {
+        console.log('맞히기 성공');
+        break;
+      }
+    }
+    console.log(`시도 횟수 => ${count}`);
+  </script>
+</body>

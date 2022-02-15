@@ -1,0 +1,22 @@
+<body>
+  <form>
+    NAME : <input type='text' name='user_name'><br>
+    NICKNAME : <input type='text' name='user_nick_name'><br>
+    <input type='button' value='OK' onclick='check()'>
+  </form>
+
+  <script>
+    function check() {
+      const name = 
+        document.querySelector('[name=user_name]');
+      const nickname = 
+        document.querySelector('[name=user_nick_name]');
+      if(name.value == '') {
+        alert('name을 입력해주세요.');
+      }
+      if(nickname.value == '') {
+        nickname.value = name.value;
+      }
+    }
+  </script>
+</body>

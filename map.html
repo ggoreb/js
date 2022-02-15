@@ -1,0 +1,13 @@
+<body>
+  <div id="map" style="width:500px;height:400px;"></div>
+	<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=14b4227d367612a88e2ad8b07b91d1e1"></script>
+	<script>
+		const container = document.getElementById('map');
+		const options = {
+			center: new kakao.maps.LatLng(33.450701, 126.570667),
+			level: 3
+		};
+
+		const map = new kakao.maps.Map(container, options);
+	</script>
+</body>

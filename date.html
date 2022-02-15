@@ -1,0 +1,27 @@
+<body>
+  <script>
+    const date = new Date();
+    let hour = date.getHours();
+    let min = date.getMinutes();
+    let sec = date.getSeconds();
+    let year = date.getFullYear();
+    let month = date.getMonth() + 1;
+    let day = date.getDate();
+    // UTC... GMT
+
+    let week = date.getDay();
+    const 요일 = { 0: '일', 1: '월', 2: '화' };
+    console.log(`${요일[week]}요일`); // 0:일 6:토
+
+    console.log(`${year}년 ${month}월 ${day}일`);
+    console.log("현재시각 : " + hour + "시 " + min + "분 " + 
+        (sec < 10 ? '0' + sec : sec) + "초");
+    if (hour < 12) {
+      console.log("아침");
+    } else if (hour < 15) {
+      console.log("점심");
+    } else {
+      console.log("저녁");
+    }
+  </script>
+</body>

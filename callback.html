@@ -1,0 +1,19 @@
+<body>
+  <script>
+    // Business Logic
+    function quiz(answer, fnPrint) {
+      if(answer) fnPrint('Yes!!');
+      else       fnPrint('No!!');
+    }
+
+    function callback(result) {
+      console.log(result);
+    }
+
+    quiz(true, callback);
+
+    quiz(false, function(res) {
+      console.log(res);
+    });
+  </script>
+</body>

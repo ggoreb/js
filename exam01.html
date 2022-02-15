@@ -1,0 +1,20 @@
+<body>
+  <button onclick="run()">버튼 1</button>
+  <script>
+    function run() {
+      const btns = document.querySelectorAll('button');
+      console.log(btns.length);
+      console.log(typeof btns);
+      const html = `<button>버튼 ${btns.length + 1}</button>`;
+      document.body.innerHTML += html;
+    }
+    let number = 10;
+    console.log(`1 number: ${number}`);
+    {
+      let number = 100;
+      console.log(`2 number: ${number}`);
+    }
+    console.log(`3 number: ${number}`);
+    console.log('3 number: ' + number);
+  </script>
+</body>

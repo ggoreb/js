@@ -1,0 +1,14 @@
+<body>
+  <script>
+    //        alert  confirm
+    let price = prompt('금액을 입력해주세요.');
+    let cnt = prompt('인원 수를 입력해주세요.');
+    let nPrice = 0;
+    console.log(typeof price, typeof cnt);
+    // JS에서는 +를 제외한 나머지 연산자 사용 시
+    // 숫자로 자동 변환
+    nPrice = Number(price) / parseInt(cnt);
+    console.log(`금액: ${price}, 인원 수: ${cnt}`);
+    console.log(`나누어 낼 금액: ${nPrice.toFixed(2)}`);
+  </script>
+</body>

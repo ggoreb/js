@@ -1,0 +1,23 @@
+<body>
+  <textarea></textarea>
+  <button onclick="del()">삭제</button>
+  <script>
+    let name = 1;
+    if(name) {
+      console.log(name);
+    }
+    console.log([] ? true : false);
+    console.log({} ? true : false);
+
+    function del() {
+      // input도 사용방법 동일
+      const textarea = document.querySelector('textarea');
+      let text = textarea.value;
+      // 0123 - index
+      // 1234 - value
+      //                            4
+      text = text.substring(0, text.length - 1);
+      textarea.value = text;
+    }
+  </script>
+</body>

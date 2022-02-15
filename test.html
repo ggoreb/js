@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+  <script>
+    window.onload = () => {
+      document.getElementById("demo").innerHTML = "첫 화면";
+    }
+
+    function change() {
+      document.getElementById("demo").innerHTML = "change";
+    }
+    function run(event) {
+      // 출력방법!
+      console.log(event);
+      if(event.keyCode == 65) {
+        document.body.style.backgroundColor = '#ff0000';
+      } else if(event.keyCode == 66) {
+        document.body.style.backgroundColor = 'blue';
+      }
+    }
+  </script>
+
+<body onkeydown="run(event)">
+  <p id="demo">text</p>
+  <button type="button" onclick="change()">change</button>
+</body>
+
+</html>

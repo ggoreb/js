@@ -1,0 +1,27 @@
+<body>
+  <script>
+    const user = { 
+      name: 'developer', age: 30, 
+      1: 'a' 
+    };
+    user.age = 29;
+    user.address = '세종';
+    console.log(user['1'], user['age']);
+    console.log(user);
+
+    //           0 1  2   3   4
+    const arr = [1, 2, 3];
+    arr[0] = 10;
+    arr[50] = 5;
+    arr[39] = 40;
+    arr['a'] = 'test';
+    for(let key in arr) {
+      console.log(arr[key]);
+    }
+
+    // for(int a : aa) { }
+    // for(int i = 0; i < aa.length(); i++) {}
+
+    // console.log(arr);
+  </script>
+</body>

@@ -1,0 +1,28 @@
+<body>
+  <script>
+    const getPosition = function(pos) {
+      let latitude = pos.coords.latitude;
+      let longitude = pos.coords.longitude;
+      console.log(latitude, longitude);
+    };
+    // 비동기로 동작
+    navigator.geolocation.getCurrentPosition(getPosition);
+
+    navigator.geolocation.getCurrentPosition(function(pos) {
+      let latitude = pos.coords.latitude;
+      let longitude = pos.coords.longitude;
+      console.log(latitude, longitude);
+    });
+
+    // 어떠한 형식의 함수든 관계없음
+    function outer() {
+      console.log('outer!');
+      return function inner() {
+        console.log('inner!');
+      }
+    }
+    outer()();
+    // const result = outer();
+    // result();
+  </script>
+</body>

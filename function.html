@@ -21,8 +21,9 @@
         console.log('inner!');
       }
     }
+    const result = outer();  // outer 실행
+    result();  // inner 실행
+
     outer()();
-    // const result = outer();
-    // result();
   </script>
 </body>

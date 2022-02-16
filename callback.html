@@ -11,6 +11,11 @@
     }
 
     quiz(true, callback);
+ 
+    function 내꺼(결과) {
+      console.log(결과);
+    }
+    quiz(false, 내꺼);
 
     quiz(false, function(res) {
       console.log(res);

@@ -1,0 +1,34 @@
+<body>
+  <script>
+    class Shape {
+      constructor(width, height, color) {
+        this.width = width;
+        this.height = height;
+        this.color = color;
+      }
+      draw() {
+        console.log(`drawing ${this.color}`);
+      }
+      getArea() {
+        return this.width * this.height;
+      }
+    }
+
+    class Rectangle extends Shape {
+      // constructor(width, height, color) {
+      //   super(width, height, color);
+      //   this.price = 10000;
+      // }
+      draw() {
+        console.log('drawing blue');
+      }
+      getArea() {
+        return `getArea() => ${this.height * this.width}`;
+      }
+    }
+    // Windows Key + . => Emoji
+    const r = new Rectangle(20, 20, 'red');
+    r.draw();
+    console.log(r.getArea());
+  </script>
+</body>

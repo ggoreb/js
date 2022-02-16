@@ -1,0 +1,23 @@
+<body>
+  <script>
+    class User {
+      constructor(fName, lName, age) {
+        this.fName = fName;
+        this.lName = lName;
+        this.age = age;
+      }
+      set age(value) {
+        if(value < 0) {
+          value = 0;
+        }
+        this._age = value;
+      }
+      get age() {
+        return this._age;
+      }
+    }
+
+    const user = new User('Steve', 'Job', -1);
+    console.log(user.age, user.lName);
+  </script>
+</body>

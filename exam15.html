@@ -1,0 +1,160 @@
+<body>
+  <div></div>
+  <script>
+    let code = '<table border="1">';
+    code += '<tr><th>ID</th><th>USER ID</th><th>TITLE</th></tr>';
+    const todo_data = [
+      {
+        "userId": 1,
+        "id": 1,
+        "title": "delectus aut autem",
+        "completed": false
+      },
+      {
+        "userId": 3,
+        "id": 2,
+        "title": "quis ut nam facilis et officia qui",
+        "completed": false
+      },
+      {
+        "userId": 7,
+        "id": 3,
+        "title": "fugiat veniam minus",
+        "completed": false
+      },
+      {
+        "userId": 2,
+        "id": 4,
+        "title": "et porro tempora",
+        "completed": true
+      },
+      {
+        "userId": 3,
+        "id": 5,
+        "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
+        "completed": false
+      },
+      {
+        "userId": 6,
+        "id": 6,
+        "title": "qui ullam ratione quibusdam voluptatem quia omnis",
+        "completed": false
+      },
+      {
+        "userId": 4,
+        "id": 7,
+        "title": "illo expedita consequatur quia in",
+        "completed": false
+      },
+      {
+        "userId": 8,
+        "id": 8,
+        "title": "quo adipisci enim quam ut ab",
+        "completed": true
+      },
+      {
+        "userId": 7,
+        "id": 9,
+        "title": "molestiae perspiciatis ipsa",
+        "completed": false
+      },
+      {
+        "userId": 2,
+        "id": 10,
+        "title": "illo est ratione doloremque quia maiores aut",
+        "completed": true
+      },
+      {
+        "userId": 1,
+        "id": 11,
+        "title": "vero rerum temporibus dolor",
+        "completed": true
+      },
+      {
+        "userId": 5,
+        "id": 12,
+        "title": "ipsa repellendus fugit nisi",
+        "completed": true
+      },
+      {
+        "userId": 4,
+        "id": 13,
+        "title": "et doloremque nulla",
+        "completed": false
+      },
+      {
+        "userId": 8,
+        "id": 14,
+        "title": "repellendus sunt dolores architecto voluptatum",
+        "completed": true
+      },
+      {
+        "userId": 7,
+        "id": 15,
+        "title": "ab voluptatum amet voluptas",
+        "completed": true
+      },
+      {
+        "userId": 4,
+        "id": 16,
+        "title": "accusamus eos facilis sint et aut voluptatem",
+        "completed": true
+      },
+      {
+        "userId": 9,
+        "id": 17,
+        "title": "quo laboriosam deleniti aut qui",
+        "completed": true
+      },
+      {
+        "userId": 1,
+        "id": 18,
+        "title": "dolorum est consequatur ea mollitia in culpa",
+        "completed": false
+      },
+      {
+        "userId": 3,
+        "id": 19,
+        "title": "molestiae ipsa aut voluptatibus pariatur dolor nihil",
+        "completed": true
+      },
+      {
+        "userId": 3,
+        "id": 20,
+        "title": "ullam nobis libero sapiente ad optio sint",
+        "completed": true
+      },
+      {
+        "userId": 2,
+        "id": 21,
+        "title": "suscipit repellat esse quibusdam voluptatem incidunt",
+        "completed": false
+      },
+      {
+        "userId": 2,
+        "id": 22,
+        "title": "distinctio vitae autem nihil ut molestias quo",
+        "completed": true
+      },
+      {
+        "userId": 2,
+        "id": 23,
+        "title": "et itaque necessitatibus maxime molestiae qui quas velit",
+        "completed": false
+      }
+    ]
+    for(let todo of todo_data) {
+      // console.log(todo);
+      const userId = todo.userId;
+      const id = todo.id;
+      const title = todo.title;
+      console.log(userId, id, title);
+      // 데이터 1건 마다 innerHTML 사용 시
+      // 매우 느려짐
+      code += `<tr><td>${id}</td><td>${userId}</td><td>${title}</td></tr>`;
+    }
+    code += '</table>'
+
+    document.querySelector('div').innerHTML = code;
+  </script>
+</body>

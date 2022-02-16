@@ -2,17 +2,20 @@
   <div id="map" style="width:500px;height:400px;"></div>
 	<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=14b4227d367612a88e2ad8b07b91d1e1"></script>
 	<script>
-		function setCenter(latitude, longitude) {            
-			var moveLatLon = new kakao.maps.LatLng(latitude, longitude);
-			map.setCenter(moveLatLon);
-		}
 
-		navigator.geolocation.getCurrentPosition(function(pos) {
+		navigator.geolocation.getCurrentPosition(pos => {
 			let latitude = pos.coords.latitude
 		  let longitude = pos.coords.longitude;
 			// 위치 확인 후
 			setCenter(latitude, longitude);
-    });
+		});
+
+		// navigator.geolocation.getCurrentPosition(function(pos) {
+		// 	let latitude = pos.coords.latitude
+		//   let longitude = pos.coords.longitude;
+		// 	// 위치 확인 후
+		// 	setCenter(latitude, longitude);
+    // });
 
 		const container = document.getElementById('map');
 		const options = {
@@ -21,5 +24,10 @@
 		};
 
 		const map = new kakao.maps.Map(container, options);
-	</script>
+
+		function setCenter(latitude, longitude) {            
+			var moveLatLon = new kakao.maps.LatLng(latitude, longitude);
+			map.setCenter(moveLatLon);
+		}
+</script>
 </body>

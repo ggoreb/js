@@ -1,0 +1,35 @@
+<body>
+  <script>
+    function aa() {
+      // 내부에서 정의된 변수는 외부에서 접근 불가
+      var aName = "Kate";
+      console.log(aName);
+    }
+
+    aa();
+
+    // console.log(aName); // 실패
+    let age = 10;
+    function sequence() {
+      let seq = 5; // 창을 이동하는 행위 횟수
+      // return ++seq;
+      return function () { // 반환값이 함수..
+        if(seq <= 0) {
+          self.close();
+        }
+        return --seq;         // 지역변수 seq 접근
+      };
+    }
+    const a = new sequence();
+    const s = sequence();
+    // console.log(s);
+    // console.log(sequence());
+    // console.log(sequence());
+    // console.log(sequence());
+    // console.log(sequence());
+
+    console.log(s());
+    console.log(s());
+    console.log(s());
+  </script>
+</body>

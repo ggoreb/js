@@ -1,0 +1,17 @@
+<body>
+  <button id="btn-1">1번</button>
+  <button id="btn-2">2번</button>
+  <button id="btn-3">3번</button>
+  
+  <script>
+    let i = 0;
+    for(i = 1; i <= 3; i++) {
+      (function(j) {
+        document.querySelector(`#btn-${j}`).addEventListener(
+          'click', function() {
+            alert(j);
+        })
+      })(i)
+    }
+  </script>
+</body>

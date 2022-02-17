@@ -247,11 +247,17 @@
         }
       ]
     };
+<<<<<<< HEAD
     let code = '<table border="1" class="table table-striped">';
     code += '<tr><td>제목</td><td>이미지</td><td>일시</td></tr>';
     const articles = top_headlines.articles;
     // for in -> key를 조회하므로 객체, 배열 둘다 사용 가능
     // for of -> value만 조회하므로 배열에만 사용 가능
+=======
+    let code = '<table border="1">';
+    code += '<tr><td>제목</td><td>이미지</td><td>일시</td></tr>';
+    const articles = top_headlines.articles;
+>>>>>>> 9e2a3bfaaaabf0f42c6733818d6e04464cd953db
     for(let key in articles) {
       const article = articles[key];
       const title = article.title;

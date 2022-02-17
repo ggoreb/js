@@ -1,0 +1,39 @@
+<body>
+  <script>
+    class Student {
+      constructor(name, age, enrolled, score) {
+        this.name = name;
+        this.age = age;
+        this.enrolled = enrolled;
+        this.score = score;
+      }
+    }
+    const students = [
+      new Student('A', 29, true, 45),
+      new Student('B', 28, false, 80),
+      new Student('C', 30, true, 90),
+      new Student('D', 40, false, 66),
+      new Student('E', 18, true, 90),
+    ];
+
+    const s = students
+      .filter(v => v.score >= 50)
+      .map(v => v.name); // [B, C, D, E]
+    // 각 문자를 아스키코드로 변경 후 정렬
+    // (문자끼리 마이너스 연산이 안되어서)
+    s.sort((a, b) => b.charCodeAt(0) - a.charCodeAt(0));
+    console.log(s.join(', '));
+
+
+
+    // const result = students.filter((v) => {
+    //   return v.score >= 50
+    // });
+    // console.log(result);
+
+    // const names = result.map((v) => {
+    //   return v.name;
+    // });
+    // console.log(names);
+</script>
+</body>

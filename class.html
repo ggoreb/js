@@ -1,5 +1,16 @@
 <body>
   <script>
+    // 1개 짜리
+    const obj = {
+      name: '10',
+      age: 30,
+      walk: function() {
+
+      }
+    };
+    obj.name;
+
+    // 여러개 가능
     class Person {
       name = '10';
       age = 30;
@@ -7,6 +18,7 @@
         console.log('걷기~~');
       }
     }
+    new Person().name;
     // Person p = new Person(); (X)
     const p = new Person();
     console.log(p.name, p.age);

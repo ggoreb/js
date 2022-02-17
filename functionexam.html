@@ -1,0 +1,38 @@
+<body>
+  <script>
+    function basic(a) {
+      return a + 10;
+    }
+
+    const ex = function(a) {
+      return a + 10;
+    }
+
+    const arrow = (a) => {
+      return a + 10;
+    };
+    arrow();
+
+    (a) => {
+      return a + 10;
+    };
+
+    // 1초(1000밀리초) 뒤에 함수의 명령문들이 동작
+    setTimeout(() => {
+      return 10;
+    }, 1000);
+
+    (function iife(a) {
+      return a + 10;
+    })();
+
+    function outer() {
+      let value = 10;
+      return function(a) {
+        return ++value;
+      }
+    }
+    const a = outer(); // 메모리에 남아 있음
+    a();
+  </script>
+</body>

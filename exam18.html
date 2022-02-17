@@ -1,0 +1,34 @@
+<body>
+  <script>
+    const max = (array) => {
+      let output = array[0];
+      array.forEach((v) => {
+        output = v > output ? v : output;
+      });
+      for(let i = 0; i < array.length; i++) {
+        if(array[i] > output) {
+          output = array[i];
+        }
+      }
+      return output;
+    };
+    console.log(
+      max([11, 23333, 32, 4])
+    );
+
+    const max2 = (array) => {
+      // "숫자" 내림차순 정렬
+      array.sort( (a, b) => b - a );
+      console.log(array);
+      return array[0];
+    };
+    console.log(
+      max2([11, 23, 32, 4])
+    );
+    // 다른 방법 Math.max()
+    console.log( Math.max(11, 23, 32, 4) );
+
+    const 배열 = [11, 23, 32, 4];
+    console.log( Math.max(...배열) );
+  </script>
+</body>

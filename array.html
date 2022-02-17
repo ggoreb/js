@@ -1,0 +1,31 @@
+<body>
+  <script>
+    const animals = ['🐶', '🐱', '🐷'];
+    console.log(animals);
+    console.log(animals.length);
+    console.log(animals[0], animals[2]);
+    console.log(animals[3]); // undefined
+    console.log(animals[animals.length - 1]); // last
+
+    // 고양이 제거
+    // 🐱
+    console.log(animals.indexOf('🐱'));
+    delete animals[ animals.indexOf('🐱') ];
+    
+    // delete animals[1];
+    console.log(animals);
+
+    // push - 마지막에 요소 추가
+    animals.push('😀');
+    console.log(animals);
+
+    // index
+    const lastIdx = animals.length;
+    console.log(lastIdx);
+
+    animals[ lastIdx ] = '😍';
+    console.log(animals);
+
+    
+  </script>
+</body>

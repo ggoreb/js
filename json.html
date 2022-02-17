@@ -1,0 +1,15 @@
+<body>
+  <script>
+    const obj = {
+      'name': 'ggoreb', // Key에 따옴표는 아무의미 없음
+      age: 33,
+      address: ['용인', '처인구', '천리']
+    };
+    // obj를 문자열로 (나중에 서버로 전송시키려고)
+    const str = JSON.stringify(obj);
+    console.log(str);
+    // 문자열을 Object로 (나중에 서버에서 받은 데이터를 쉽게 사용하려고)
+    const trans = JSON.parse(str);
+    console.log(trans);
+  </script>
+</body>

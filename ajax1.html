@@ -1,0 +1,16 @@
+<body>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script>
+    // get 사용 시 url만 있으면 됨
+    const data = axios({
+      url: 'http://ggoreb.com/ajax/json/data1.jsp'
+    });
+    data.then(function (result) {
+      console.log(result.data);
+      const obj = result.data;
+      const name = obj.name;
+      const age = obj.age;
+      console.log(name, age);
+    });
+  </script>
+</body>

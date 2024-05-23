@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <script>
+    class User {
+      constructor(firstName, lastName, age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+      }
+
+      set age(value) {
+        if(value < 0) value = 0;
+        this._age = value;
+      }
+      get age() {
+        return this._age;
+      }
+    }
+    const user = new User('Steve', 'Job', -1);
+    console.log(user.age);
+  </script>
+</body>
+
+</html>

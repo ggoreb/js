@@ -1,0 +1,17 @@
+<body>
+  <script>
+    let x = 4;
+    
+    // 실행결과 -> 함수
+    const f = a();
+    f();
+
+    function a() {
+      let c = 100;
+      return function() {
+        c += 1;
+        alert(c);
+      }
+    }
+  </script>
+</body>

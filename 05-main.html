@@ -1,0 +1,11 @@
+<body>
+  <button onclick="run()">실행1</button>
+  <button onclick="OO()">실행2</button>
+
+  <script src="./05-sub1.js"></script>
+
+  <script type="module">
+    import { OO } from './05-sub2.js';
+    window.OO = OO;
+  </script>
+</body>

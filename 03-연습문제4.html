@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  점수: <input type="text">
+  <br>
+  <input type="checkbox" id="pass"> 자격증
+  <input type="checkbox"> 포트폴리오
+  <button onclick="run()">확인</button>
+
+  <script>
+    function run() {
+      const 점수 = document.querySelector('[type=text]');
+      let score = 점수.value;
+      
+      const 포트폴리오 = document.querySelector('[type=checkbox]:nth-of-type(2)');
+      let hasPortfolio = 포트폴리오.checked;
+
+      const 자격증 = document.querySelector('#pass');
+      let isPass = 자격증.checked;
+
+      if(score >= 60 && (hasPortfolio === true || isPass === true)) {
+        console.log('채용');
+      } else {
+        console.log('탈락');
+      }
+    }
+  </script>
+</body>
+</html>

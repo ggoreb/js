@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <script>
+    const article = {
+      num: 1,
+      title: 'A',
+      reply: [
+        { num: 3, title: 'A-3' },
+        { num: 2, title: 'A-2' },
+        { num: 1, title: 'A-1' }
+      ]
+    };
+    for(const key in article) {
+      if(typeof article[key] == 'object') {
+        for(const key2 in article[key]) {
+          console.log(article[key][key2]);
+        }
+      } else {
+        console.log(article[key]);
+      }
+    }
+  </script>
+</body>
+
+</html>

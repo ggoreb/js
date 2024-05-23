@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <script>
+    class Shape {
+      constructor(width, height, color) {
+        this.width = width;
+        this.height = height;
+        this.color = color;
+      }
+      draw() {
+        console.log(`draw`);
+      }
+      getArea() {
+        console.log(`getArea`)
+      }
+    }
+
+    class Rectangle extends Shape { // Shape 상속
+      draw() {
+        return `drawing ${this.color}`;
+      }
+      getArea() {
+        return `getArea() => ${this.width * this.height}`;
+      }
+    }
+
+    class Triangle extends Shape { // Shape 상속
+      draw() {
+        return `draw() => ${this.color}`;
+      }
+      getArea() {
+        return `getArea() => ${this.width * this.height / 2}`;
+      }
+    }
+
+    // Rectangle의 draw()와 getArea() 호출
+    const rect = new Rectangle(20, 20, 'blue');
+    console.log(rect.draw());
+    console.log(rect.getArea());
+
+    // Triangle의 draw()와 getArea() 호출
+    const tri = new Triangle(20, 20, '🔺');
+    console.log(tri.draw());
+    console.log(tri.getArea());
+    
+  </script>
+</body>
+
+</html>

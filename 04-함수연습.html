@@ -1,0 +1,15 @@
+<body>
+  <script>
+    function calculator(items) {
+      let total = 0;
+      for(let i = 0; i < items.length; i++) {
+        const item = items[i];
+        total += item;
+      }
+      return total / items.length;
+    }
+
+    console.log(calculator([3, 7, 9, 11]))
+
+  </script>
+</body>

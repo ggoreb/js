@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <script>
+    function quiz(answer, printYes, printNo) {
+      if (answer === 'love you') {
+        printYes();
+      } else {
+        printNo();
+      }
+    }
+
+    const printYes = function () {
+      console.log('yes!');
+    }
+
+    const printNo = function () {
+      console.log('no!');
+    }
+    
+    quiz('wrong', printYes, printNo);
+    quiz('love you', printYes, printNo);
+  </script>
+</body>
+
+</html>

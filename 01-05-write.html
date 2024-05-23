@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <h2>My First Web Page</h2>
+  <p>My first paragraph.</p>
+
+  <button type="button" onclick="openPopup()">팝업</button>
+
+  <button type="button" onclick="document.write(5 + 6)">계산</button>
+
+  <script>
+    function openPopup() {
+      const popup = window.open('', '', 'width=300px height=150px');
+      popup.document.write('<h1>Popup</h1>');
+    }
+  </script>
+
+</body>
+</html>

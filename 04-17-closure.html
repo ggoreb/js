@@ -1,0 +1,17 @@
+<body>
+  <script>
+    //                   이벤트, 콜백함수
+    // window.addEventListener();
+    function f() {
+      let count = 0;
+      return function() {
+        count++;
+        return count;
+      }
+    }
+    const a = f();
+    window.addEventListener('blur', () => {
+      let c = a();
+      if(c > 5) close();
+    });
+  </script>

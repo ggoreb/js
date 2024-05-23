@@ -1,0 +1,17 @@
+<body>
+  <script>
+    get(); // 호이스팅 hoisting
+
+    async function get() {
+      const url = 'http://ggoreb.com/http/html1.jsp';
+      //    response  result
+      const res = await fetch(url);
+      const data = await res.text(); // res.json();
+      console.log(data);
+
+      const body = document.querySelector('body');
+      body.innerHTML = data;
+    }
+
+  </script>
+</body>

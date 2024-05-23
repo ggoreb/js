@@ -1,0 +1,12 @@
+<body>
+  <script>
+    let 거스름돈 = 2100;
+    let 동전수 = 0;
+    let 동전종류 = [500, 100];
+    for(let i = 0; i < 동전종류.length; i++) {
+      동전수 += parseInt(거스름돈 / 동전종류[i]);
+      거스름돈 %= 동전종류[i];
+    }
+    alert(동전수);
+  </script>
+</body>
